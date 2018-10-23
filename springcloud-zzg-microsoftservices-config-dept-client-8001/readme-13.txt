@@ -1,0 +1,1 @@
+第十三步：springcloud的微服务提供者去连的分布式配置中心的服务端工程springcloud-zzg-microsoftservices-config-3344，间接获取GitHub上的属于这个工程在对应环境下的配置信息

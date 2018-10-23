@@ -1,0 +1,2 @@
+第六步：使用feign客户端去调服务，用该方案实现调服务时候的面向接口编程，并替换掉springcloud-zzg-microsoftservices-consumer-dept-80消费者端工程中使用RestTemplate去调服务的方式。
+              也就是说springcloud-zzg-microsoftservices-consumer-dept-feign-80用这个工程去替换掉springcloud-zzg-microsoftservices-consumer-dept-80 这个工程

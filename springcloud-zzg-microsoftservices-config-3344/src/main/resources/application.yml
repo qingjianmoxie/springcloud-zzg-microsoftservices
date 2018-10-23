@@ -1,0 +1,13 @@
+server: 
+  port: 3344 
+  
+spring:
+  application:
+    name:  springcloud-zzg-microsoftservices-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:qingjianmoxie/springcloud-zzg-microsoftservices-provider-dept.git       #GitHub上面的git仓库名字
+ 
+

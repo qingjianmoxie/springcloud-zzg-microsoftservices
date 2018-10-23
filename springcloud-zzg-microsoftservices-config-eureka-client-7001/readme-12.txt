@@ -1,0 +1,1 @@
+第十二步：springcloud注册中心去连的分布式配置中心的服务端工程springcloud-zzg-microsoftservices-config-3344，间接获取GitHub上的eureka的配置信息

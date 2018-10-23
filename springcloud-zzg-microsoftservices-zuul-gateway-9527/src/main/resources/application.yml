@@ -1,0 +1,30 @@
+server: 
+  port: 9527
+ 
+spring: 
+  application:
+    name: springcloud-zzg-microsoftservices-zuul-gateway-9527   #将网关当成新的服务注册到注册中心上去
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+  instance:
+    instance-id: gateway-9527.com     ##这个是网关的实例
+    prefer-ip-address: true 
+ 
+ 
+zuul: 
+  #ignored-services: springcloud-zzg-microsoftservices-provider-dept  #表示不以这个名称访问服务
+  prefix: /zzg     #这个是访问网关的前缀URI的一部分
+  ignored-services: "*"    #这个表示先忽略所有访问服务的URI，以自定义的配置的URI来访问网关，进而访问挂在网关上的服务
+  routes: 
+    mydept.serviceId: springcloud-zzg-microsoftservices-provider-dept    #这个是网关要代理的微服务对外暴露的服务名称
+    mydept.path: /mydept/**      ## 这个是在访问网关前缀的URI后面加的服务的URI的前缀：访问的时候就这么访问：http://gateway-9527.com:9527/zzg/mydept/dept/get/3
+ 
+info:
+  app.name: springcloud-zzg-microsoftservices
+  company.name: www.zzg.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+

@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: springcloud-zzg-microsoftservices-config-eureka-client
+
